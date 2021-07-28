@@ -1,13 +1,12 @@
 :root{
     --border-radius: 10px;
     --line-height: 1.2em;
-    /* --section-width: 35em; */
     --section-width: 90%;
 
     --red: hsl(0, 100%, 74%);
     --green: hsl(154, 59%, 51%);
 
-    --blue: hsl(248, 32%, 49%); /* ACCENT */
+    --blue: hsl(248, 32%, 49%);
 
     --dark-blue: hsl(249, 10%, 26%);
     --grayish-blue: hsl(246, 25%, 77%);
@@ -18,7 +17,8 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     color: white;
 }
 
@@ -26,6 +26,30 @@ html{
     background-color: var(--red);
     background-image: url('images/bg-intro-desktop.png');
 }
+
+::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--grayish-blue);
+    font-weight: 500;
+    opacity: 1; /* Firefox */
+  }
+
+::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--grayish-blue);
+    font-weight: 500;
+    opacity: 1; /* Firefox */
+  }
+
+:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--grayish-blue);
+    font-weight: 500;
+    opacity: 1; /* Firefox */
+  }
+
+::-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--grayish-blue);
+    font-weight: 500;
+    opacity: 1; /* Firefox */
+  }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--grayish-blue);
@@ -44,13 +68,19 @@ html{
 
 body{
     min-height: 100vh;
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 
 #container{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1.5em 1fr;
     grid-template-columns: 1fr 1fr;
     max-width: 90%;
     margin: 0 auto;
@@ -59,8 +89,11 @@ body{
 
 #intro-text{
     max-width: var(--section-width);
-    justify-self: center;
-    align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 #intro-text h1{
@@ -122,6 +155,7 @@ a{
 }
 
 form{
+    display: -ms-grid;
     display: grid;
 }
 
@@ -153,6 +187,7 @@ p#terms-agreement a{
 
 @media screen and (max-width:750px){
     #container{
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         margin-top: 4em;
         margin-bottom: 4em;
