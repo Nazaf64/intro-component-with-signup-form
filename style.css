@@ -159,6 +159,10 @@ form{
     display: grid;
 }
 
+.fieldContainer{
+    margin-bottom: 1.5em;
+}
+
 input{
     border-radius: 5px;
     border: 1px solid var(--grayish-blue);
@@ -166,12 +170,15 @@ input{
     padding-bottom: 0.8em;
     padding-left: 1.7em;
     padding-right: 1.7em;
-    margin-bottom: 1.5em;
     color: #000;
     width: 100%;
 }
 
-input[type=text]:focus{
+input.inputField:focus{
+    outline: 1px solid var(--blue);
+}
+
+input.error:focus{
     outline: 1px solid var(--blue);
 }
 
@@ -183,6 +190,18 @@ p#terms-agreement{
 
 p#terms-agreement a{
     font-size: 1em;
+}
+
+.msg{
+    margin-top: 0.5em;
+    color: red;
+    font-size: 0.8em;
+    font-style: oblique;
+    float: right;
+}
+
+.msg-none{
+    display: none;
 }
 
 @media screen and (max-width:750px){

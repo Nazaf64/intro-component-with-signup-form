@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">  
   <title>Intro component with sign up form</title>
 </head>
@@ -20,12 +21,29 @@
         <button id="free-trial"><strong>Try it free 7 days</strong> then $20/mo. thereafter</button>
         <div id="card-wrapper">
           <div id="form-stuff">
-            <form action="">
-              <input type="text" placeholder="First Name">
-              <input type="text" placeholder="Last Name">
-              <input type="text" placeholder="Email Address">
-              <input type="text" placeholder="Password">
-              <button id="claim-free-trial">Claim your free trial</button>
+            <form action="#">
+              <div class="fieldContainer">
+                <input id="fname" class="inputField" type="text" placeholder="First Name" required>
+
+                <div class="msg"></div>
+              </div>
+              
+              <div class="fieldContainer">
+                <input id="lname" class="inputField" type="text" placeholder="Last Name" required>
+                <div class="msg"></div>
+              </div>              
+
+              <div class="fieldContainer">
+                <input id="email" class="inputField" type="email" placeholder="Email Address" required>
+              <div class="msg"></div>
+              </div>              
+
+              <div class="fieldContainer">
+                <input id="password" class="inputField" type="password" placeholder="Password" required>
+                <div class="msg"></div>
+              </div>
+              
+              <button id="claim-free-trial" type="submit">Claim your free trial</button>
             </form>
             <p id="terms-agreement">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
           </div>          
@@ -33,5 +51,7 @@
       </div>      
     </div>   
   </main>
+
+  <script src="main.js"></script>
 </body>
 </html>
