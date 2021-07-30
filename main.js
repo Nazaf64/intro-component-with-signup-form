@@ -1,7 +1,5 @@
 const btn = document.getElementById("claim-free-trial");
-const formFields = document.getElementsByClassName("inputField");
-const msg = document.querySelector('.msg');
-
+const formFields = document.getElementsByTagName("input");
 
 // EMAIL VALIDATION
 function ValidateEmail(mail) 
@@ -18,18 +16,22 @@ function formValidation(){
         if(formFields[i].type === 'email' && formFields[i].value != ''){
             var logic = ValidateEmail(formFields[i].value);  
             if (logic === false){
+                formFields[i].className = "error";
                 formFields[i].parentElement.lastElementChild.className = "msg";
                 formFields[i].parentElement.lastElementChild.innerHTML = "You have entered an invalid email address!";
             } else {
+                formFields[i].className = "inputField";
                 formFields[i].parentElement.lastElementChild.className = "msg-none";
             }    
-        } else {
+        } 
+        else {
             if (formFields[i].value === '') {
+                formFields[i].className = "error";
                 formFields[i].parentElement.lastElementChild.className = "msg";
                 formFields[i].parentElement.lastElementChild.innerHTML = "This field cannot be blank";
-            }
-    
+            }    
             else {
+                formFields[i].className = "inputField";
                 formFields[i].parentElement.lastElementChild.className = "msg-none";
             }
         }

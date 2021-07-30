@@ -176,9 +176,16 @@ input{
 
 input.inputField:focus{
     outline: 1px solid var(--blue);
+    /* border: 1px solid var(--blue); */
+
+}
+
+input.error{
+    border: 1px solid var(--red);
 }
 
 input.error:focus{
+    border: 1px solid var(--grayish-blue);
     outline: 1px solid var(--blue);
 }
 
