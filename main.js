@@ -38,7 +38,17 @@ function formValidation(){
     }
 }
 
+function clearFields() {
+    for (i=0; i < formFields.length; i++){
+        formFields[i].value = '';
+    }
+    }
+
 btn.addEventListener('click', (e) => {
     e.preventDefault();
     formValidation();
 });
+
+window.onload = function () {
+    clearFields()
+}

@@ -181,12 +181,16 @@ input.inputField:focus{
 }
 
 input.error{
+    background-image: url('images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: center right 1em;
     border: 1px solid var(--red);
 }
 
 input.error:focus{
     border: 1px solid var(--grayish-blue);
     outline: 1px solid var(--blue);
+    background-image: none;
 }
 
 p#terms-agreement{
